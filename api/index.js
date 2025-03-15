@@ -9,8 +9,8 @@ import path from "path";
 const __dirname = path.resolve();
 
 const app = express();
-
-const port = process.env.PORT || 4000;
+// process.env.PORT || 
+const port = 4000;
 connectDB();
 
 app.use(express.static(path.join(__dirname, "/client/dist")));
