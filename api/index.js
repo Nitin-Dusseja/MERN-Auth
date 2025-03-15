@@ -25,7 +25,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: allowedOrigins,
+    origin: 'https://mern-auth-pyww.onrender.com',
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
   })
