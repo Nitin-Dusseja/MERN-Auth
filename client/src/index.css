@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+
+.bn5 {
+  border: none;
+  outline: none;
+  /* color: rgb(255, 255, 255);*/
+  font-weight: 600;
+  color: black;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 25px;
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+  }
+
+.shadow{
+  box-shadow:  20px 20px 60px #bebebe,
+  -20px -20px 60px #ffffff;
+}
+
+
+.bn5:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowingbn5 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 25px;
+}
+
+@keyframes glowingbn5 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.bn5:active {
+  color: #000;
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow:  0px 0px 5.3px rgba(0, 0, 0, 0.04),
+  0px 0px 17.9px rgba(0, 0, 0, 0.06);
+}
+
+.bn5:active:after {
+  background: transparent;
+}
+
+.bn5:hover:before {
+  opacity: 1;
+}
+
+.bn5:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  left: 0;
+  top: 0;
+  border-radius: 25px;
+}
+
+.form-shadow{
+  box-shadow:
+  0px 0px 5.3px rgba(0, 0, 0, 0.04),
+  0px 0px 17.9px rgba(0, 0, 0, 0.06),
+  0px 0px 80px rgba(0, 0, 0, 0.1);
+}
+
+
+.bg-color{
+  background-image: repeating-linear-gradient(90deg, rgba(198, 198, 198,0.05) 0px, rgba(198, 198, 198,0.05) 1px,transparent 1px, transparent 5px),repeating-linear-gradient(0deg, rgba(198, 198, 198,0.05) 0px, rgba(198, 198, 198,0.05) 1px,transparent 1px, transparent 5px),repeating-linear-gradient(0deg, rgba(198, 198, 198,0.06) 0px, rgba(198, 198, 198,0.06) 1px,transparent 1px, transparent 15px),repeating-linear-gradient(90deg, rgba(198, 198, 198,0.06) 0px, rgba(198, 198, 198,0.06) 1px,transparent 1px, transparent 15px),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));
+}
