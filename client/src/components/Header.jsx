@@ -4,6 +4,7 @@ import { AppContext } from '../context/AppContext'
 
 const Header = () => {
   const { userData } = useContext(AppContext)
+  console.log(userData)
   return (
     <div className='h-screen w-screen flex items-center justify-center flex-col bg-color'>
       <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Technologist%20Light%20Skin%20Tone.png" alt="Man Technologist Light Skin Tone" width="250" height="250" />
