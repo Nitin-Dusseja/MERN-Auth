@@ -19,13 +19,13 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
 });
 
-const allowedOrigins = ["http://localhost:5173"];
+const allowedOrigins = ["http://localhost:5173",'https://mern-auth-pyww.onrender.com', "*","http://localhost:4000" ];
 
 app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: 'https://mern-auth-pyww.onrender.com',
+    origin: allowedOrigins,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
   })
