@@ -7,7 +7,7 @@ export default defineConfig({
     server: {
     proxy: {
       '/api': {
-        target: 'https://mern-auth-pyww.onrender.com/',
+        target: 'http://localhost:4000',
         secure: false,
       },
     },
