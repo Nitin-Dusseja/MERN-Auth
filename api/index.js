@@ -13,7 +13,7 @@ const app = express();
 const port = 4000;
 connectDB();
 
-app.use('/api', require('./routes/api')); 
+app.use('/api', require('./routes/api/auth')); 
 
 app.use(express.static(path.join(__dirname, "/client/dist")));
 
