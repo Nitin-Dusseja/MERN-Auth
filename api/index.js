@@ -13,9 +13,10 @@ const app = express();
 const port = 4000;
 connectDB();
 
-app.use('/api/auth', require('./api/routes/authRoutes')); 
-app.use('/api/user', require('./api/routes/userRoutes')); 
-
+// app.use('/api/auth', require('./api/routes/authRoutes')); 
+// app.use('/api/user', require('./api/routes/userRoutes')); 
+app.use("/api/auth", authRouter);
+app.use("/api/user", userRouter);
 app.use(express.static(path.join(__dirname, "/client/dist")));
 
 app.get("*", (req, res) => {
@@ -46,7 +47,6 @@ app.get("/test-cors", (req, res) => {
 app.get("/", (req, res) => {
   res.send("Api working");
 });
-app.use("/api/auth", authRouter);
-app.use("/api/user", userRouter);
+
 
 app.listen(port, () => console.log(`Server Started on port ${port}`));
