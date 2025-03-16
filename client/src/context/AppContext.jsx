@@ -21,11 +21,11 @@ export const AppContextProvider = ({ children }) => {
         setIsLoggedin(true)
         getUserData()
       }else{
-        console.log(data.message)
+        console.log(data.message,"getAuthState")
         toast.error(data.message)
       }
     } catch (error) {
-      console.log(error.message)
+      console.log(error.message, "getAuthState")
       toast.error(error.message)
     }
   }
@@ -40,7 +40,7 @@ export const AppContextProvider = ({ children }) => {
       console.log(data.message, data, {data})
       data.success ? setUserData(data.userdata) : toast.error(data.Message)
     } catch (error) {
-      console.log(error.massage)
+      console.log(error.massage, "getUserData")
       toast.error(error.message)
     }
   }
