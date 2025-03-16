@@ -13,6 +13,8 @@ const app = express();
 const port = 4000;
 connectDB();
 
+app.use('/api', require('./routes/api')); 
+
 app.use(express.static(path.join(__dirname, "/client/dist")));
 
 app.get("*", (req, res) => {
